@@ -1,0 +1,17 @@
+cc_library(
+    name = "b_tree",
+    srcs = ["b_tree.cc"],
+    hdrs = ["b_tree.h"],
+    deps = [
+        "@com_google_absl//absl/types:optional",
+    ],
+)
+
+cc_test(
+    name = "b_tree_test",
+    srcs = ["b_tree_test.cc"],
+    deps = [
+        ":b_tree",
+        "@com_google_googletest//:gtest_main",
+    ],
+)
